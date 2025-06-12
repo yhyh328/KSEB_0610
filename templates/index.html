@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>오디오 업로드 테스트</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        .container { max-width: 600px; margin: auto; }
+        textarea { width: 100%; height: 100px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>오디오 파일 업로드</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="audio" accept="audio/*" required>
+        <button type="submit">업로드</button>
+    </form>
+    {% if transcript %}
+        <h2>결과</h2>
+        <textarea readonly>{{ transcript }}</textarea>
+    {% endif %}
+</div>
+</body>
+</html> 
